@@ -129,3 +129,12 @@ var bdayinterval = setInterval(function () {
 
 var purimmoney = 400 + "ILS";
 var shlomiagenow = new Date("Feb 26, 2041 00:00:00").getTime();
+var mymoneynow = document.getElementById("mymoneynow");
+
+var setCounter = function () {
+  var startcountingmymoney =
+    (new Date().getTime() - new Date("01/01/2023").getTime()) / 5259492000;
+  $(mymoneynow).text(startcountingmymoney);
+};
+setInterval(setCounter, 1000);
+setCounter();
