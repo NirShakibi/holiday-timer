@@ -2,6 +2,7 @@ var purim = new Date("Mar 6, 2023 00:00:00").getTime();
 var passover = new Date("April 5, 2023 00:00:00").getTime();
 var shavuot = new Date("May 25, 2023 00:00:00").getTime();
 var bday = new Date("Feb 26, 2023 00:00:00").getTime();
+var Bucharest = new Date("April 26, 2023 00:00:00").getTime();
 
 var puriminterval = setInterval(function () {
   var purimnow = new Date().getTime();
@@ -138,3 +139,30 @@ var setCounter = function () {
 };
 setInterval(setCounter, 1000);
 setCounter();
+
+var Bucharestinterval = setInterval(function () {
+  var Bucharestnow = new Date().getTime();
+  var Bucharestdistance = Bucharest - Bucharestnow;
+
+  var Bucharestdays = Math.floor(Bucharestdistance / (1000 * 60 * 60 * 24));
+  var Bucharesthours = Math.floor(
+    (Bucharestdistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  var Bucharestminutes = Math.floor((Bucharestdistance % (1000 * 60 * 60)) / (1000 * 60));
+  var Bucharestseconds = Math.floor((Bucharestdistance % (1000 * 60)) / 1000);
+
+  document.getElementById("Bucharest").innerHTML =
+    Bucharestdays +
+    "d " +
+    Bucharesthours +
+    "h " +
+    Bucharestminutes +
+    "m " +
+    Bucharestseconds +
+    "s ";
+
+  if (Bucharestinterval < 0) {
+    clearInterval(Bucharestinterval);
+    document.getElementById("Bucharest").innerHTML = "Let's go Bucharest!!!";
+  }
+});
