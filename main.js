@@ -1,7 +1,7 @@
-var purim = new Date("Mar 6, 2023 00:00:00").getTime();
+var purim = new Date("Mar 23, 2024 00:00:00").getTime();
 var passover = new Date("April 5, 2023 00:00:00").getTime();
 var shavuot = new Date("May 25, 2023 00:00:00").getTime();
-var bday = new Date("Feb 26, 2023 00:00:00").getTime();
+var bday = new Date("Feb 26, 2024 00:00:00").getTime();
 var Bucharest = new Date("April 26, 2023 00:00:00").getTime();
 
 var puriminterval = setInterval(function () {
